@@ -1,3 +1,32 @@
 page-home {
 
 }
+.no-padding {
+    padding: 0px !important;
+    border: 0px;
+}
+.imagen{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, center;
+}
+
+.container-portada{
+    width: 100%;
+   // height: 200px;
+   height: auto;
+    position: relative;
+    background-image: url(../assets/imgs/fondo.jpg);
+    background-size: 100%;
+    animation: movimiento 20s infinite linear alternate;  
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
