@@ -1,0 +1,8 @@
+{
+  "name": "cesfampac",
+  "app_id": "f6b983a3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
