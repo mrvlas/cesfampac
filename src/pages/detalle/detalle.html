@@ -1,26 +1,27 @@
 
 <ion-header>
 
-    <ion-navbar color="negro">
+    <ion-navbar color="primary">
       <ion-title>{{detalleMenu.nombre}}</ion-title>
     </ion-navbar>
   
   </ion-header>
   
   
-  <ion-content padding text-center>
-  
-      <ion-card>
-          <ion-img style="width: 150px; height:150px;" src={{detalleMenu.img}}></ion-img>
+  <ion-content aling-text>
+        <ion-card>
+          <img src={{detalleMenu.img_articulo}}>
           <ion-card-content>
             <ion-card-title>
-                {{detalleMenu.nombre}}
+              {{detalleMenu.nombre}}
               </ion-card-title>
-            <p ALIGN="justify">
-                {{detalleMenu.titulo}}
+            <p>
+              {{detalleMenu.titulo}}.
+              <br>
+              {{detalleMenu.info}}
             </p>
           </ion-card-content>
-        </ion-card>
-  
+        </ion-card>      
+
   
   </ion-content>

@@ -13,8 +13,9 @@ import {DetallePage,
   HomePage, 
   ModalPage,
   TabsPage,
+  CasfamPage,
   TabsLlamarPage,
-  TabsMuniPage} from "../pages/index.paginas";
+  TabsMuniPage,} from "../pages/index.paginas";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {DetallePage,
     TabsPage,
     TabsLlamarPage,
     TabsMuniPage,
-    DetallePage
+    DetallePage,
+    CasfamPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import {DetallePage,
     TabsPage,
     TabsLlamarPage,
     TabsMuniPage,
-    DetallePage
+    DetallePage,
+    CasfamPage
   ],
   providers: [
     StatusBar,
