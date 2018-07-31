@@ -7,3 +7,5 @@ export {TabsPage} from "./tabs/tabs";
 export {TabsLlamarPage} from "./tabs-llamar/tabs-llamar";
 export {TabsMuniPage} from "./tabs-muni/tabs-muni";
 export {CasfamPage} from "./casfam/casfam";
+export { AlimentacionPage } from "./alimentacion/alimentacion";
+export { EjercicioPage } from "./ejercicio/ejercicio";

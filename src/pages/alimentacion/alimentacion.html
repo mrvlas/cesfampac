@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Alimentación Saludable</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!--<ion-card *ngFor="let post of posts | async"> -->
+  <ion-card *ngFor="let post of _cap.imagenes">
+    <img [src]="post.img" />
+    <ion-card-content>
+      <ion-card-title>
+        {{post.titulo}}
+      </ion-card-title>
+      <p>
+        {{post.descripcion}}
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+
+        <ion-col text-left>
+            <button ion-button clear small color="primary"
+                    icon-left>
+                  <ion-icon name="calendar"></ion-icon>
+                    {{post.fecha}}  
+                  </button>  
+          </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="primary"
+                icon-left
+                (click)="compartir(post)">
+              <ion-icon name="share-alt"></ion-icon>
+              Compartir  
+              </button>  
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)"
+                        [enabled]="hayMas2">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>
