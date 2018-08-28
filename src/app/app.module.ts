@@ -16,6 +16,9 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 //Plugins para boquear orientación de pantalla
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
 
+//Para maximizar las imaganes
+import { IonicImageViewerModule } from 'ionic-img-viewer';
+
 
 
 //Se importan todas las paginas  a este modulo
@@ -27,8 +30,10 @@ import {DetallePage,
   TabsLlamarPage,
   AlimentacionPage,
   EjercicioPage,
+  LeyAlimentosPage,
   TabsMuniPage} from "../pages/index.paginas";
-import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo'; //Provider cargado
+import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo'; //Provider cargado alimentacion 
+import { CargaArchivoProvider2 } from "../providers/carga-archivo/carga-archivo2"; //Provider2 ejercicios
 
   //Firebase
   export const firebaseConfig = {
@@ -55,7 +60,8 @@ import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo';
     DetallePage,
     AlimentacionPage,
     CasfamPage,
-    EjercicioPage
+    EjercicioPage,
+    LeyAlimentosPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,8 @@ import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo';
     }),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [ //Acá tambien se deben incorporar las page
@@ -77,7 +84,8 @@ import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo';
     DetallePage,
     AlimentacionPage,
     CasfamPage,
-    EjercicioPage
+    EjercicioPage,
+    LeyAlimentosPage
   ],
   providers: [
     StatusBar,
@@ -87,7 +95,8 @@ import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo';
     SocialSharing,
     ScreenOrientation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CargaArchivoProvider
+    CargaArchivoProvider,
+    CargaArchivoProvider2
   ]
 })
 export class AppModule {}

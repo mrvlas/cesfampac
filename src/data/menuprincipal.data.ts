@@ -4,18 +4,16 @@ export const MENU = [
     {
       numero_menu:'1',
       img:'assets/imgs/cesfam.png',
-      nombre: 'CESFAM PAC',
-      titulo: 'Centro de Salud Familiar Pedro Aguirre Cerda de Calle Larga',
+      nombre: 'CESFAM José Joaquín Aguirre',
+      titulo: 'Centro de Salud Familiar de Calle Larga',
       img_articulo: 'assets/imgs/cesfam_1.jpg',
-      info:'Prestar un servicio eficiente integral, dinámico y oportuno a las familias y usuarios de la comunidad de Calle Larga, a través, de un trabajo en equipo con énfasis en: prevención, promoción, recuperación y rehabilitación de la salud basada en una atención humanizada.'
     },
     {
       numero_menu:'2',
       img:'assets/imgs/pide_tu_hora.png',
-      nombre: 'Pide tú hora',
-      titulo: 'Numeros telefonicos para solicitar hora',
+      nombre: 'Pide tu hora',
+      titulo: 'No más filas para pedir horas médicas',
       img_articulo: 'assets/imgs/cesfam_1.jpg',
-      info:'Prestar un servicio eficiente integral, dinámico y oportuno a las familias y usuarios de la comunidad de Calle Larga, a través, de un trabajo en equipo con énfasis en: prevención, promoción, recuperación y rehabilitación de la salud basada en una atención humanizada.'
     },
     {
       numero_menu:'3',
@@ -31,9 +29,16 @@ export const MENU = [
     },
     {
       numero_menu:'5',
-      img:'assets/imgs/preguntas.png',
-      nombre: 'Preguntas y respuestas',
-      titulo: 'Todo lo que necesitas saber del CESFAM'
+      img:'assets/imgs/salud_responde.png',
+      nombre: 'Salud Responde',
+      titulo: 'Atención las 24 horas.'
     },
+    {
+      numero_menu:'6',
+      img:'assets/imgs/cereales.png',
+      nombre: 'Ley de Alimentos',
+      titulo: 'Prefiera alimentos con menos sellos.'
+    },
+
   ];
   

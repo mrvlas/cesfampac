@@ -6,9 +6,10 @@ import {CasfamPage} from "../casfam/casfam";
 import { CallNumber } from '@ionic-native/call-number';
 import { AlimentacionPage } from "../alimentacion/alimentacion";
 import { EjercicioPage } from "../ejercicio/ejercicio";
+import { LeyAlimentosPage } from "../ley-alimentos/ley-alimentos";
 
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+//import { AngularFireDatabase } from 'angularfire2/database';
+//import { Observable } from 'rxjs/Observable';
 
 //Bloquear orientacion de pantalla
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
@@ -31,7 +32,7 @@ export class HomePage {
 
     //Bloquear Orientación de pantalla
     //console.log(this.screenOrientation.type);
-    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+    //this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
 
 
   }
@@ -39,10 +40,10 @@ export class HomePage {
   MostrarMenu(menuPrincipal:Menuprincipal){
     console.log(menuPrincipal);
     
-   if (menuPrincipal.nombre == "CESFAM PAC"){
+   if (menuPrincipal.nombre== "CESFAM José Joaquín Aguirre"){
      this.navCtrl.push(CasfamPage);
    } 
-   if (menuPrincipal.nombre=="Pide tú hora"){
+   if (menuPrincipal.nombre=="Pide tu hora"){
      console.log("Has precionado el menu pide tu hora");
      this.callNumber.callNumber("+56800432299", true)
      .then(res => console.log('Launched dialer!', res))
@@ -56,6 +57,18 @@ export class HomePage {
    if(menuPrincipal.nombre == "Ejercicios"){
     this.navCtrl.push(EjercicioPage);
   }
+
+  if (menuPrincipal.nombre=="Salud Responde"){
+    console.log("Has precionado el menu Salud Responde");
+    this.callNumber.callNumber("6003607777", true)
+    .then(res => console.log('Launched dialer!', res))
+    .catch(err => console.log('Error launching dialer', err))
+  }
+
+  if(menuPrincipal.nombre == "Ley de Alimentos"){
+    this.navCtrl.push(LeyAlimentosPage);
+  }
+
 
    
    //La siguiente linea es para cargar una pagina enviando parametros

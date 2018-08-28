@@ -9,7 +9,6 @@
 
   <!--<ion-card *ngFor="let post of posts | async"> -->
   <ion-card *ngFor="let post of _cap.imagenes">
-    <img [src]="post.img" />
     <ion-card-content>
       <ion-card-title>
         {{post.titulo}}
@@ -18,6 +17,7 @@
         {{post.descripcion}}
       </p>
     </ion-card-content>
+    <img [src]="post.img" imageViewer />
 
     <ion-row>
 
